@@ -1,19 +1,21 @@
-This fork is based on the foundation of EdiZon 3.1 nightly. The changes made are on the game memory hack aspect.
 
-Here are the added features:
-  Range search.
-  Compare with previous value search.
-  Bookmark memory location found.
-  Speed enhancement to make small integer value in first search practicle.
-  Bookmark adjust to changing main and heap start address on subsequent launch of the game. 
-  Bookmark with pointer chain attached updates memory address dynamically when the chain is able to resolve into a valid memory address.
-  Extract memory address from dmnt cheat code and add it to bookmark for exploration of the memory location.
-  Rebase feature to extract potential pointer chain form dmnt cheat code made for previous version of the game.
-  In app pointer chain search for address on bookmark.
-  Export dump to PC app (forked from pointersearcher 0.4) for more powerful pointer chain search.
-  Import PC app search result for validation and testing.
-  Create dmnt cheat code from pointer chain found.
-  Ability to detach dmnt from game process.
-  Adding/Removing conditional button to cheat code.
+Dieser Fork basiert auf der Grundlage von EdiZon 3.1 nightly und konzentriert sich auf Verbesserungen im Bereich der Spielspeicher-Hacks.
 
-Please refer to https://github.com/tomvita/EdiZon-SE/wiki for instructions on how to use the app.
+Hier sind die hinzugefügten Funktionen:
+
+- Bereichssuche: Ermöglicht die Suche innerhalb eines bestimmten Speicherbereichs.
+- Vergleich mit vorherigem Wert: Suche nach Änderungen im Vergleich zum vorherigen Speicherwert.
+- Lesezeichen für gefundene Speicherorte: Speichere wichtige Speicherorte für den schnellen Zugriff.
+- Geschwindigkeitsverbesserung: Optimiert die Suche nach kleinen Ganzzahlen, um sie praktikabler zu machen.
+- Anpassung der Lesezeichen: Automatische Anpassung an sich ändernde Haupt- und Heap-Startadressen bei erneutem Start des Spiels.
+- Dynamische Aktualisierung von Lesezeichen mit Zeigerketten: Aktualisiert Speicheradressen dynamisch, wenn die Kette in eine gültige Adresse aufgelöst werden kann.
+- Extraktion von Speicheradressen aus dmnt-Cheat-Codes: Füge diese Adressen zu Lesezeichen hinzu, um den Speicherort zu erkunden.
+- Rebase-Funktion: Extrahiere potenzielle Zeigerketten aus dmnt-Cheat-Codes, die für frühere Spielversionen erstellt wurden.
+- In-App-Zeigerkettensuche: Suche nach Adressen in Lesezeichen.
+- Export von Speicherabbildern zur PC-App (abgeleitet von Pointersearcher 0.4): Ermöglicht eine leistungsfähigere Suche nach Zeigerketten.
+- Import von Suchergebnissen der PC-App: Zur Validierung und zum Testen.
+- Erstellung von dmnt-Cheat-Codes aus gefundenen Zeigerketten.
+- Möglichkeit, dmnt vom Spielprozess zu trennen.
+- Hinzufügen/Entfernen von Bedingungsschaltflächen zu Cheat-Codes.
+
+Weitere Anleitungen zur Nutzung der App findest du unter [EdiZon-SE Wiki](https://github.com/tomvita/EdiZon-SE/wiki).
