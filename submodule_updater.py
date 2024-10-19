@@ -38,7 +38,7 @@ def update_gitmodules_url(account_name="glitched-nx"):
 def ensure_master_branch_in_gitmodules():
     """
     Überprüft die Datei '.gitmodules', um sicherzustellen, dass jedes Submodul auf den Master-Branch zeigt.
-    Falls nicht, wird 'branch = master' eingefügt.
+    Falls nicht, wird 'branch = master' direkt unter der URL eingefügt.
     """
     gitmodules_path = ".gitmodules"
 
@@ -47,16 +47,18 @@ def ensure_master_branch_in_gitmodules():
         return
 
     with open(gitmodules_path, "r") as file:
-        content = file.read()
+        content = file.readlines()
 
-    if "branch = master" not in content:
-        print("Adding 'branch = master' to .gitmodules...")
-        with open(gitmodules_path, "a") as file:
-            file.write("\nbranch = master\n")
-        print(".gitmodules updated.")
-    else:
-        print("All submodules already set to 'master' branch.")
+    updated_content = []
+    for i, line in enumerate(content):
+        updated_content.append(line)
+        if line.strip().startswith("url =") and (i + 1 >= len(content) or not content[i + 1].strip().startswith("branch =")):
+            updated_content.append("	branch = master\n")
 
+    with open(gitmodules_path, "w") as file:
+        file.writelines(updated_content)
+
+    print("Ensured all submodules are set to 'master' branch in .gitmodules.")
 
 def update_submodules():
     """
