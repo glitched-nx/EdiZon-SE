@@ -1,115 +1,110 @@
 # EdiZon SE
 
-This fork is based on the foundation of EdiZon 3.1 nightly. The changes made are on the game memory hack aspect. 
+Dieser Fork basiert auf der Grundlage von EdiZon 3.1 Nightly. Die vorgenommenen Änderungen betreffen hauptsächlich den Aspekt des Spielspeicher-Hackings.
 
-Here are the added features: 
-1. Range search.
-2. Compare with previous value search. 
-3. Bookmark memory location found. 
-4. Speed enhancement to make small integer value in first search practicle.
-5. Bookmark adjust to changing main and heap start address on subsequent launch of the game. Bookmark with pointer chain attached updates memory address dynamically when the chain is able to resolve into a valid memory address.
-6. Extract memory address from dmnt cheat code and add it to bookmark for exploration of the memory location. 
-7. Rebase feature to extract potential pointer chain form dmnt cheat code made for previous version of the game. 
-8. In app pointer chain search for address on bookmark. 
-9. Export dump to PC app (forked from pointersearcher 0.4) for more powerful pointer chain search. 
-10. Import PC app search result for validation and testing. 
-11. Create dmnt cheat code from pointer chain found.
-12. Ability to detach dmnt from game process.
-13. Adding/Removing conditional button to cheat code.
-14. Multi target search for faster convergencence when the data structure is known. 
-15. Memory explorer to look at the memory data structure, follow pointer chain and edit pointer chain. 
+Hier sind die hinzugefügten Funktionen:
+1. Bereichssuche.
+2. Vergleich mit vorherigem Wert bei der Suche.
+3. Lesezeichen für gefundene Speicherorte.
+4. Geschwindigkeitsverbesserung, um kleine Ganzzahlen bei der ersten Suche praktikabel zu machen.
+5. Lesezeichen passen sich an die sich ändernde Haupt- und Heap-Startadresse bei erneutem Spielstart an. Lesezeichen mit angehängter Zeigerkette aktualisieren die Speicheradresse dynamisch, wenn die Kette in eine gültige Speicheradresse aufgelöst werden kann.
+6. Extrahiere Speicheradressen aus dmnt-Cheat-Codes und füge sie dem Lesezeichen zur Erkundung des Speicherorts hinzu.
+7. Rebase-Funktion, um potenzielle Zeigerketten aus dmnt-Cheat-Codes zu extrahieren, die für frühere Versionen des Spiels erstellt wurden.
+8. In-App-Zeigerkettensuche für Adressen im Lesezeichen.
+9. Exportiere Dump zur PC-App (abgeleitet von Pointersearcher 0.4) für eine leistungsfähigere Zeigerkettensuche.
+10. Importiere Suchergebnisse der PC-App zur Validierung und Prüfung.
+11. Erstelle dmnt-Cheat-Codes aus gefundenen Zeigerketten.
+12. Möglichkeit, dmnt vom Spielprozess zu trennen.
+13. Hinzufügen/Entfernen von Bedingungstasten zu Cheat-Codes.
+14. Mehrzielsuche für schnellere Konvergenz, wenn die Datenstruktur bekannt ist.
+15. Speicher-Explorer, um die Speicher-Datenstruktur zu betrachten, Zeigerketten zu folgen und Zeigerketten zu bearbeiten.
 
-PS: Please refer to https://github.com/tomvita/EdiZon-SE/wiki for instructions on how to use the app. 
+PS: Bitte besuche https://github.com/tomvita/EdiZon-SE/wiki für Anleitungen zur Nutzung der App.
 
-To establish common base for support please start from a clean boot with the latest atmosphere and only Sigpatches needed to run the game and latest releases from https://github.com/tomvita. Please state the url you downloaded from. No extra software unless it is related to the topic underdiscussoin.
+Um eine gemeinsame Basis für den Support zu schaffen, starte bitte mit einem sauberen Boot mit der neuesten Atmosphère-Version und nur den Sigpatches, die zum Ausführen des Spiels benötigt werden, sowie den neuesten Releases von https://github.com/tomvita. Bitte gib die URL an, von der Du heruntergeladen hast. Keine zusätzliche Software, es sei denn, sie steht im Zusammenhang mit dem Thema der Diskussion.
 
-For support with the usage of EdiZon SE Join my discord server https://discord.gg/bEFfp7MZUD
+Für Unterstützung bei der Nutzung von EdiZon SE tritt meinem Discord-Server bei: https://discord.gg/bEFfp7MZUD
 
-Original functinality of Edizon on game save is available when launched without a game running. 
+Die ursprüngliche Funktionalität von Edizon für Spielstände ist verfügbar, wenn es ohne laufendes Spiel gestartet wird.
 
-  <p align="center"><img src="https://user-images.githubusercontent.com/68505331/94226638-aa5aad00-ff2a-11ea-8b39-151c41bbc774.jpg"><br />
-      <a href="https://github.com/tomvita/EdiZon-SE/releases/latest"><img src="https://img.shields.io/github/downloads/tomvita/EdiZon-SE/total.svg" alt="Latest Release" /></a>
-    
-    
-  </p>
+<p align="center"><img src="https://user-images.githubusercontent.com/68505331/94226638-aa5aad00-ff2a-11ea-8b39-151c41bbc774.jpg"><br />
+<a href="https://github.com/tomvita/EdiZon-SE/releases/latest"><img src="https://img.shields.io/github/downloads/tomvita/EdiZon-SE/total.svg" alt="Latest Release" /></a>
+</p>
 
-The save management and editing part of the original is mostly unmodified except now you only see the save game functionality if you enter when no game is running and only the last game is display if there was a last game. To see all the games enter into "cheat" when no game is running and the next time EdiZon SE is launched all the game save will appear. 
+Der Teil der Speicherverwaltung und -bearbeitung des Originals ist größtenteils unverändert, außer dass Du die Speicherfunktionalität nur siehst, wenn Du eintrittst, wenn kein Spiel läuft, und nur das letzte Spiel angezeigt wird, wenn es ein letztes Spiel gab. Um alle Spiele zu sehen, gehe in den "Cheat"-Modus, wenn kein Spiel läuft, und beim nächsten Start von EdiZon SE werden alle Spielstände angezeigt.
 
-# Original functionaliy present but not being develop upon:
-  
-  - **Save file management**
-    - Extraction of game saves.
-    - Injection of extracted game saves (Your own and your friends save files).
-    - Uploading of savefiles directly to https://anonfile.com.
-    - Batch extraction of all save files of all games on the system.
-  - **Save file editing**
-    - Easy to use, scriptable and easily expandable on-console save editing.
-      - Lua and Python script support.
-    - Built-in save editor updater.
+# Ursprüngliche Funktionalität vorhanden, aber nicht weiterentwickelt:
 
-# How to install
+- **Speicherdateiverwaltung**
+  - Extraktion von Spielständen.
+  - Einspeisung von extrahierten Spielständen (Deine eigenen und die Deiner Freunde).
+  - Hochladen von Speicherdateien direkt auf https://anonfile.com.
+  - Stapelweise Extraktion aller Speicherdateien aller Spiele auf dem System.
+- **Speicherdateibearbeitung**
+  - Einfach zu bedienende, skriptbare und leicht erweiterbare On-Console-Speicherbearbeitung.
+    - Unterstützung für Lua- und Python-Skripte.
+  - Integrierter Speicher-Editor-Updater.
 
-  1. Download the latest release from https://github.com/tomvita/EdiZon-SE/releases/latest.
-  2. Unpack the downloaded zip file, put the files on your Nintendo Switch's SD card and let the folders merge.
-  3. Use a free open source CFW like [Atmosphère](https://github.com/Atmosphere-NX/Atmosphere) to launch the hbmenu and start EdiZon from there.
-     1. If you want to use the cheat manager you absolutely have to use [Atmosphère](https://github.com/Atmosphere-NX/Atmosphere) as only their cheats are supported.
-     2. For the best experience, open the `/atmosphere/system_settings.ini` file and change `dmnt_cheats_enabled_by_default = u8!0x1` to `dmnt_cheats_enabled_by_default = u8!0x0`. If the file does not exist you can copy the template from /atmosphere/config_templates/system_settings.ini and change the line, remember to remove the ";" in front.
-    
-# Trouble shooting
+# Installation
 
-There are a few things that affects your switch environment. 
-1. Atmosphere version. All version before 3.8.17 is not compatible with atm 19.
-2. How you boot. I use fusee primary. Try using fusee primary until trouble shooting is done.
-3. Atmosphere and sept directory that has contents from previous installation. If you didn't delete these two directories before you copy over the new one there may be left over from previous installation that has problem.  
-4. SD card corruption. If you have exfat corruption is a matter of time. 
-5. Sysmodules running in the background. Sysmodules can interfere with edizon se. Use sysmodule manager in edizon se (available from 3.8.16) to disable all the sysmodules to see if that solves the problem.
-6. Deleted edizon files. You can delete everything in \switch\edizon but if you delete some and leave others depending on what you leave behind and what you deleted edizon may end up in a infinite loop looking for the some deleted stuff. To know what you can safely delete you can learn by trial and error or just delete everything and start from default.
-7. Missing /atmosphere/config/system_settings.ini. If you don't have this file cheat codes are all turn on by default and most cheat codes were not design to be all turned on at the same time. If you have no clue how to create this file sysmodule manager will offer to create it for you (available from 3.8.17) with code default to off and toggle file creation on.
-8. Bad file in /atmosphere/config/. Make sure you know what you are doing. Anything wrong here can severely affect the operation of atmosphere. 
-9. The cheat code you use. Check the cheat file you are using. Disable all cheats before you start the game. You can quickly call up edizon se while the game is still booting check that the cheats are all off. After the game boots up to where you want to use the cheats check which one may be causing the problem. You should suspect every cheat code until you have tested it throughly.  
+1. Lade die neueste Version von https://github.com/tomvita/EdiZon-SE/releases/latest herunter.
+2. Entpacke die heruntergeladene ZIP-Datei, lege die Dateien auf die SD-Karte Deiner Nintendo Switch und lasse die Ordner zusammenführen.
+3. Verwende eine kostenlose Open-Source-CFW wie [Atmosphère](https://github.com/Atmosphere-NX/Atmosphere), um das hbmenu zu starten und EdiZon von dort aus zu starten.
+   1. Wenn Du den Cheat-Manager verwenden möchtest, musst Du unbedingt [Atmosphère](https://github.com/Atmosphere-NX/Atmosphere) verwenden, da nur deren Cheats unterstützt werden.
+   2. Für das beste Erlebnis öffne die Datei `/atmosphere/system_settings.ini` und ändere `dmnt_cheats_enabled_by_default = u8!0x1` zu `dmnt_cheats_enabled_by_default = u8!0x0`. Wenn die Datei nicht existiert, kannst Du die Vorlage aus /atmosphere/config_templates/system_settings.ini kopieren und die Zeile ändern, denke daran, das ";" davor zu entfernen.
 
-## How to turn off sysmodule
-1. Launch EdiZon SE without game. Press L. Press Y. Use A to toggle off sysmodules. Press "Home" to exit back to home screen.
+# Fehlerbehebung
 
-# How to compile
+Es gibt einige Dinge, die Deine Switch-Umgebung beeinflussen.
+1. Atmosphère-Version. Alle Versionen vor 3.8.17 sind nicht kompatibel mit atm 19.
+2. Wie Du bootest. Ich verwende fusee primary. Versuche, fusee primary zu verwenden, bis die Fehlerbehebung abgeschlossen ist.
+3. Atmosphère- und Sept-Verzeichnisse, die Inhalte von vorherigen Installationen enthalten. Wenn Du diese beiden Verzeichnisse nicht gelöscht hast, bevor Du die neuen kopierst, können Überreste von vorherigen Installationen Probleme verursachen.
+4. SD-Karten-Korruption. Wenn Du exfat verwendest, ist Korruption nur eine Frage der Zeit.
+5. Sysmodule, die im Hintergrund laufen. Sysmodule können EdiZon SE stören. Verwende den Sysmodule-Manager in EdiZon SE (verfügbar ab 3.8.16), um alle Sysmodule zu deaktivieren und zu sehen, ob das Problem dadurch gelöst wird.
+6. Gelöschte EdiZon-Dateien. Du kannst alles in \switch\edizon löschen, aber wenn Du einige löschst und andere behältst, kann EdiZon in einer Endlosschleife stecken bleiben, wenn es nach den gelöschten Dateien sucht. Um zu wissen, was Du sicher löschen kannst, kannst Du es durch Ausprobieren lernen oder einfach alles löschen und von den Standardeinstellungen aus neu starten.
+7. Fehlende /atmosphere/config/system_settings.ini. Wenn Du diese Datei nicht hast, sind alle Cheat-Codes standardmäßig aktiviert und die meisten Cheat-Codes sind nicht dafür ausgelegt, alle gleichzeitig aktiviert zu sein. Wenn Du keine Ahnung hast, wie Du diese Datei erstellen kannst, bietet der Sysmodule-Manager an, sie für Dich zu erstellen (verfügbar ab 3.8.17) mit Code standardmäßig ausgeschaltet und Umschaltdatei-Erstellung aktiviert.
+8. Schlechte Datei in /atmosphere/config/. Stelle sicher, dass Du weißt, was Du tust. Alles, was hier falsch ist, kann die Funktion von Atmosphère erheblich beeinträchtigen.
+9. Der Cheat-Code, den Du verwendest. Überprüfe die Cheat-Datei, die Du verwendest. Deaktiviere alle Cheats, bevor Du das Spiel startest. Du kannst EdiZon SE schnell aufrufen, während das Spiel noch startet, um zu überprüfen, ob alle Cheats deaktiviert sind. Nachdem das Spiel an der Stelle gestartet ist, an der Du die Cheats verwenden möchtest, überprüfe, welcher möglicherweise das Problem verursacht. Du solltest jeden Cheat-Code verdächtigen, bis Du ihn gründlich getestet hast.
 
-  1. Clone the EdiZon SE repo to your computer using `git clone https://github.com/tomvita/EdiZon-SE`.
-  2. Download and install devkitA64. It comes bundled with the [devkitPro](https://devkitpro.org) toolchain.
-  3. Use the pacman package manager that comes with devkitPro to download and install libNX, portlibs (`switch-portlibs`) and freetype2 (`switch-freetype`).
-  4. The rest of the compilation works using the `make` command.
-  5. You need to revert this from libnx or update the source yourself due to this https://github.com/switchbrew/libnx/commit/637dd12b2df58c469d4e87a48aa3ebf0bc359766
+## So schaltest Du das Sysmodule aus
+1. Starte EdiZon SE ohne Spiel. Drücke L. Drücke Y. Verwende A, um Sysmodule auszuschalten. Drücke "Home", um zum Startbildschirm zurückzukehren.
+
+# Kompilierung
+
+1. Klone das EdiZon SE-Repo auf Deinen Computer mit `git clone https://github.com/tomvita/EdiZon-SE`.
+2. Lade devkitA64 herunter und installiere es. Es wird mit der [devkitPro](https://devkitpro.org) Toolchain gebündelt.
+3. Verwende den Pacman-Paketmanager, der mit devkitPro geliefert wird, um libNX, Portlibs (`switch-portlibs`) und freetype2 (`switch-freetype`) herunterzuladen und zu installieren.
+4. Der Rest der Kompilierung erfolgt mit dem `make`-Befehl.
+5. Du musst dies von libnx zurücksetzen oder die Quelle selbst aktualisieren aufgrund dieses [Commits](https://github.com/switchbrew/libnx/commit/637dd12b2df58c469d4e87a48aa3ebf0bc359766).
 
 # Discord
 
-  For support with the usage of EdiZon SE Join my discord server https://discord.gg/bEFfp7MZUD
-  or for support with the creation of save editor configs and scripts join the original EdiZon server on Discord: https://discord.gg/qyA38T8
+Für Unterstützung bei der Nutzung von EdiZon SE tritt meinem Discord-Server bei: https://discord.gg/bEFfp7MZUD
+oder für Unterstützung bei der Erstellung von Speicher-Editor-Konfigurationen und Skripten tritt dem ursprünglichen EdiZon-Server auf Discord bei: https://discord.gg/qyA38T8
 
 # Credits
 
-  Thanks to...
+Danke an...
 
-  - [devkitPro](https://devkitpro.org) for their amazing toolchain!
-  - [3096](https://github.com/3096) for [save dumping/injecting](https://github.com/3096/nut)
-  - [Bernardo Giordano](https://github.com/BernardoGiordano) for some code from [Checkpoint](https://github.com/BernardoGiordano/Checkpoint).
-  - [SwitchBrew](https://switchbrew.org/) for the [Homebrew Launcher](https://github.com/switchbrew/nx-hbmenu) GUI and shared font code.
-  - [thomasnet-mc](https://github.com/thomasnet-mc/) for most of the save backup and restore code and the updater script.
-  - [trueicecold](https://github.com/trueicecold) for batch backups and the editable-only mode.
-  - [onepiecefreak](https://github.com/onepiecefreak3) for the edizon debugger and LOTS of reviewing implementations.
-  - [Jojo](https://github.com/drdrjojo) for the Travis CI configuration and the config creator.
-  - [Ac_K](https://github.com/AcK77) for help with the server side update scripts and the EdiZon save website.
-  - [jakibaki](https://github.com/jakibaki) for her massive help with the implementation of RAM editing and sys-netcheat which was used as inspiration.
-  - [SciresM](https://github.com/SciresM) for the aarch64 hardware accelerated SHA256 code, his implementation of the Atmosphère cheat engine and his support during development.
-  - **kardch** for the beautiful current icon.
-  - **bernv3** for the beautiful old icon.
-  - **All config creators** for bringing this project to life!
+- [devkitPro](https://devkitpro.org) für ihre großartige Toolchain!
+- [3096](https://github.com/3096) für das Speichern und Laden von Spielständen ([save dumping/injecting](https://github.com/3096/nut)).
+- [Bernardo Giordano](https://github.com/BernardoGiordano) für einige Codes von [Checkpoint](https://github.com/BernardoGiordano/Checkpoint).
+- [SwitchBrew](https://switchbrew.org/) für den [Homebrew Launcher](https://github.com/switchbrew/nx-hbmenu) GUI und den gemeinsamen Schriftcode.
+- [thomasnet-mc](https://github.com/thomasnet-mc/) für den größten Teil des Speicher-Backup- und Wiederherstellungscodes und das Updater-Skript.
+- [trueicecold](https://github.com/trueicecold) für Batch-Backups und den nur editierbaren Modus.
+- [onepiecefreak3](https://github.com/onepiecefreak3) für den EdiZon-Debugger und viele Überarbeitungen der Implementierungen.
+- [Jojo](https://github.com/drdrjojo) für die Travis CI-Konfiguration und den Konfigurations-Ersteller.
+- [Ac_K](https://github.com/AcK77) für die Hilfe bei den serverseitigen Update-Skripten und der EdiZon-Speicher-Website.
+- [jakibaki](https://github.com/jakibaki) für ihre massive Hilfe bei der Implementierung der RAM-Bearbeitung und sys-netcheat, die als Inspiration diente.
+- [SciresM](https://github.com/SciresM) für den aarch64 hardwarebeschleunigten SHA256-Code, seine Implementierung der Atmosphère-Cheat-Engine und seine Unterstützung während der Entwicklung.
+- **kardch** für das schöne aktuelle Icon.
+- **bernv3** für das schöne alte Icon.
+- **Alle Konfigurations-Ersteller** für das Leben dieses Projekts!
 
-  <br>
-
-  - [nlohmann](https://github.com/nlohmann) for his great json library.
-  - [Martin J. Fiedler](https://svn.emphy.de/nanojpeg/trunk/nanojpeg/nanojpeg.c) for the nanojpeg JPEG decoding library.
-  - [Lua](https://www.lua.org/) for their scripting language.
-  - [Python](https://www.python.org/) and [nx-python](https://github.com/nx-python) for their scripting language respectively their python port to the switch.
-
+- [nlohmann](https://github.com/nlohmann) für seine großartige JSON-Bibliothek.
+- [Martin J. Fiedler](https://svn.emphy.de/nanojpeg/trunk/nanojpeg/nanojpeg.c) für die nanojpeg JPEG-Dekodierungsbibliothek.
+- [Lua](https://www.lua.org/) für ihre Skriptsprache.
+- [Python](https://www.python.org/) und [nx-python](https://github.com/nx-python) für ihre Skriptsprache bzw. ihren Python-Port für die Switch.
 
   <br>
   <p align="center"><img src="https://www.lua.org/images/logo.gif">
