@@ -1,4 +1,4 @@
 [submodule "libs/libnx"]
 	path = libs/libnx
 	url = https://github.com/glitched-nx/libnx.git
-	branch = master
+	branch = edizon_se_libnx
